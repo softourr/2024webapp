@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 0. reset부터 하기 */
+    *{margin: 0;padding: 0;}
+    a:link,a.visited{text-decoration: none; color: black;}
+    ul,li{list-style: none;}
+    /* 초기화 단계에서 clear css를 미리 만들어두고, 사용할 수 있음 */
+    .clear:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .hd{
+        background: blue;
+    }
+
+    /* 1. 메뉴를 float left로 잡기 -> clear:both 사용으로 해제 */
+    .menu{
+        width: 1360px;
+        margin: 0 auto;
+        background-color: skyblue;
+    }
+    
+    .menu>li{
+        float: left;
+        width: 20%;
+    }
+
+    .menu>li>a{
+        text-align: center;
+        display: block;
+        width: 100%;
+        line-height: 50px;
+    }
+
+    .menu>li>a:hover{
+        background-color: green;
+        color: white;
+    }
+
+    .visual{
+        background-color: green;
+        height: 200px;
+    }
+</style>
+<body>
+    <header class="hd">
+        <ul class="menu clear">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+        </ul>
+    </header>
+    <div class="visual">
+
+    </div>
+</body>
+</html>

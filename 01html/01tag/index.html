@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- meta:vp (viewport)로 바로 생성 가능 -->
+    <!-- 반응형 생성시 필수 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+    <!-- > 자식 관계 -->
+    <!-- (띄어쓰기) 자손 관계 -->
+    <!-- . 과 (띄어쓰기). 은 다름 -->
+    <style>
+        body div{background-color: skyblue;}
+        body>div{background-color: pink;}
+        h1{color: red;}
+        .test1{background-color: skyblue;}
+        .test2{background-color: pink;}
+    </style>
+</head>
+    <!-- ALT L + O : Live Server Open -->
+<body>
+    <!-- block 단위 요소와 inline 요소 생각하기 -->
+    <!-- 회사 로고는 주로 h1으로 감쌈 -> crawlerBot이 검색하기 쉽게 함 -->
+    <h1>로고</h1>
+    <!-- 나머지 강조부는 h2 ~ -->
+    <!-- emmet에서, >는 child관계, +는 sibling관계-->
+    <!-- body>h1+h2 TAB -->
+    <h2>title</h2>
+    <!-- devtools -> application 내에 local storage를 확인할 수 있음-->
+    <!-- 브라우저 내에 존재하는, 로컬 저장소 -->
+    <!-- 세션 스토리지 : 꼬리표(나머지 반은 서버에 저장되어, 세션과 일치해야하는 용도) -->
+    <!-- 요즘엔 토큰으로 대체되는 추세 -->
+    <!-- indexedDB는 사라질 추세(?) -->
+
+    <!-- 기본 폰트 크기 : 16px로 설정 됨 -->
+    <!-- body에서 해당 폰트 크기를 수정할 수 있음 -->
+    <!-- h4 == 기본 폰트 크기 -->
+    <!-- em : 비율 단위, 1em은 주로 16px -->
+    <h4>test</h4>
+    <!-- lorem TAB, 또는 lorem10 과 같이 숫자를 입력하면, 해당 단어 개수 생성 -->
+    <!-- inline style이 우선순위가 더 높다 -->
+    <p style="width: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span style="color: red;">Similique harum</span> officia illum illo reprehenderit facilis repellat optio distinctio autem cumque exercitationem, accusamus placeat quidem laudantium cum dolores repudiandae, totam est deserunt? Atque molestias incidunt consectetur commodi eaque maiores illo. Architecto atque non dicta laborum dolores. Magnam voluptate est similique quasi, totam voluptatibus dignissimos dicta beatae?</p>
+    <address>test</address>
+    <!-- 뒤의 /는 쓰지 않아도 됨 -->
+    <hr />
+    <!-- 공간분할 태그 -->
+    <!-- emmet에서, div>div*3>lorem2 TAB -->
+    <div>
+        <div>Lorem, ipsum.</div>
+        <div>Magnam, saepe!</div>
+        <div>Quod, repudiandae.</div>
+    </div>
+    <!-- emmet에서, ul>li*10>{menu$} TAB -->
+    <!-- menu단 개발할 때는 div 보단 ul>li를 사용하는 경우가 대부분 -->
+    <ul>
+        <li>
+            <a href="a">menu1</a>
+            <ul class="submenu">
+                <li><a href="a">sub1</a></li>
+                <li><a href="a">sub2</a></li>
+                <li><a href="a">sub3</a></li>
+                <li><a href="a">sub4</a></li>
+            </ul>
+        </li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+        <li>menu6</li>
+        <li>menu7</li>
+        <li>menu8</li>
+        <li>menu9</li>
+        <li>menu10</li>
+    </ul>
+    <!-- inline 태그 -->
+    <!-- block 단위 안에 inline으로 일부만 style을 변경하는데 사용됨 -->
+    <a href="#">test</a>
+    <a href="#">test</a>
+    <img src="https://cms.imgworlds.com/assets/e3873302-212a-4c3a-aab3-c3bee866903c.jpg?key=home-gallery" alt="" width="50px">
+    <img src="https://cms.imgworlds.com/assets/e3873302-212a-4c3a-aab3-c3bee866903c.jpg?key=home-gallery" alt="" width="50px">
+    <span>SPAN test</span>
+    <span>SPAN test</span>
+
+    <!-- css 우선 순위 -->
+    <!-- * < tag(1) < class(10) < id(100) < inline style < !important -->
+    <!-- 자바 스크립트가 변경하는 부분은 inline style이므로, 우선순위가 높다 -->
+    <h1 class="test1">test</h1>
+    <h1 id="test2" style="background-color: yellow;">test</h1>
+
+    <!-- style은 어디든 위치 상관 없으나, script 기본 위치는 가장 밑 -->
+    <script></script>
+</body>
+</html>
