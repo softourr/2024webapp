@@ -48,6 +48,30 @@
     .visual{
         background-color: green;
         height: 200px;
+        margin-bottom: 1em;
+    }
+
+    .section{
+        width: 1360px;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    .section .sectionLeft{float: left; width: 1000px; background-color: skyblue;}
+    .section .sectionRight{float: right; width: 300px; background-color: pink;}
+
+    .section div{height: 700px;}
+
+    .ft{
+        padding: 20px 0;
+        background: green;
+    }
+
+    .ft div{
+        width: 1360px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: orange;
     }
 </style>
 <body>
@@ -61,7 +85,16 @@
         </ul>
     </header>
     <div class="visual">
-
+        slide
     </div>
+    <section class="section clear"> <!-- 1360px -->
+        <div class="sectionLeft">left</div>
+        <div class="sectionRight">right</div>
+    </section>
+    <footer class="ft">
+        <div> <!-- 1360px -->
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, blanditiis?
+        </div>
+    </footer>
 </body>
 </html>
