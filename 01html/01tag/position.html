@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        /* body 역시 block요소이므로, 높이 설정 필요 */
+        html, body{
+            height: 100%;
+        }
+
+        body{
+            /* layout overflow 시, scroll을 방지 */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxWrap{
+            background-color: skyblue;
+            width: 200px;
+            height: 200px;
+            /* position을 absolute로 지정하면, 좌표 값 설정 가능 */
+            /* position: absolute; */
+        }
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+
+    </div>
+</body>
+</html>

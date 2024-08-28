@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+.container{
+    width: 1360px;
+    margin: 0 auto;
+}
+
+.bg-gray{
+    /* css 우선순위 때문에 !important를 붙이는게 좋음 */
+    background-color: #ddd !important;
+}
+
+.bg-orange{
+    background-color: orange !important;
+}
+
+.hd{
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.bg-sky{
+    background-color: skyblue !important;
+}
+
+.menuWrap{
+    display: flex;
+    justify-content: space-between;
+    /* height: 70px; */
+    padding: 10px 0;
+    /* align-items: center; */
+}
+
+/* 항상 flex는 정렬하고자 하는 개체의 부모에 적용 */
+.menuWrap .gnb ul{
+    display: flex;
+}
+
+.menuWrap .gnb li{
+    width: 150px;
+    height: 50px;
+}
+
+.menuWrap .gnb a{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuWrap .gnb a:hover{
+    font-weight: bold;
+}
+
+.menuWrap .sns{
+    display: flex;
+    align-self: center;
+    gap: 10px;
+}
+
+.menuWrap .sns li{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #4b4bc0;
+    color: white;
+}
+
+.visual{
+    height: 400px;
+}
