@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body{
+    height: 300vh;
+}
+
 .container{
     width: 1360px;
     margin: 0 auto;
@@ -15,7 +19,12 @@
 }
 
 .hd{
+    position: fixed;
+    width: 100%;
+    background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    /* z-index 값은 int의 최대 범위, 일반적인 경우 100 이하면 충분하다. */
+    z-index: 100;
 }
 
 .bg-sky{
@@ -69,5 +78,46 @@
 }
 
 .visual{
-    height: 400px;
+    min-height: 400px;
+    height: 100vh;
+    margin-bottom: 20px;
+}
+
+.top{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .card{
+    width: 384px;
+    height: 580px;
+}
+
+.banner .card .cardText{
+    padding: 10px 20px;
+}
+
+.banner .card .cardText h3{
+    margin-bottom: 10px;
+}
+
+.banner .card .imgWrap img{
+    transition: 0.3s;
+}
+
+.banner .card .imgWrap:hover img{
+    /* 개체 이동 및 변경 */
+    transform: translate(-10px,-10px) scale(1.05);
+    /* rotate(5deg) */
+    box-shadow: 30px 30px 20px rgba(0,0,0,0.3);
 }

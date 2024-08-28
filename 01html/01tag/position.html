@@ -7,7 +7,13 @@
     <style>
         *{margin: 0;padding: 0;box-sizing: border-box;}
         /* body 역시 block요소이므로, 높이 설정 필요 */
-        html, body{
+        /*
+            ',' 사용시 주의점
+            .tab a, b{}는
+            .tab a, .tab b{}와 다르다
+        */
+        html,
+        body{
             height: 100%;
         }
 
@@ -25,12 +31,51 @@
             height: 200px;
             /* position을 absolute로 지정하면, 좌표 값 설정 가능 */
             /* position: absolute; */
+
+            /* 부모에서 position을 사용해야 child에서 위치 한정 */
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .boxWrap div{
+            width: 100px;
+            height: 100px;
+        }
+
+        .boxWrap .box1{
+            background-color: black;
+            /* relative는 top/left를 주로 사용 */
+            /* child의 경우 absolute를 사용하는 경우가 많다. */
+
+            /* position: absolute;
+            right: -50px; */
+
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        .boxWrap .box2{
+            background: red;
+            position: relative;
+            /* z-index 값이 크면 위로 올라옴 */
+            /* z-index가 동일한 경우 아래 객체가 위로 올라옴 */
+            z-index: 1;
+        }
+
+        .boxWrap .box3{
+            background: blue;
+            position: absolute;
+            top: 100px;
+            left: 50px;
         }
     </style>
 </head>
 <body>
     <div class="boxWrap">
-
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
     </div>
 </body>
 </html>
