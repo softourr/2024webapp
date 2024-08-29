@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul, li{list-style: none;}
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+/* flex 사용 시 쓸 일이 크게 없음 */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}

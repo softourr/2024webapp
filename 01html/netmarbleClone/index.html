@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="hd bg-red">
+        <div class="menuWrap container netmarbleFont">
+            <h1><a href="/">넷마블문화재단</a></h1>
+            <nav class="menu">
+                <li><a href="#">재단소개</a></li>
+                <li><a href="#">재단활동</a></li>
+                <li><a href="#">재단소식</a></li>
+            </nav>
+        </div>
+    </header>
+    <div class="visual">
+        <ul class="slider">
+            <li>
+                <div class="visual-text">
+                    <h2>게임소통학교</h2>
+                    <p>게임으로 소통하고 게임으로 가까워지는 가족</p>
+                </div>
+                <div class="visual-img">
+                    <img src="./images/banner01.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="visual-text">
+                    <h2>게임소통학교</h2>
+                    <p>게임으로 소통하고 게임으로 가까워지는 가족</p>
+                </div>
+                <div class="visual-img">
+                    <img src="./images/banner02.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="visual-text">
+                    <h2>게임소통학교</h2>
+                    <p>게임으로 소통하고 게임으로 가까워지는 가족</p>
+                </div>
+                <div class="visual-img">
+                    <img src="./images/banner04.jpg" alt="">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container visual2">
+        <div class="text">
+            <h3>문화를 만들고 인재를 키우고<br>마음을 나눕니다</h3>
+            <div class="box"></div>
+            <p>넷마블문화재단은 문화적 가치 확산을 통해 우리 사회의 미래 경쟁력을 높여 가고자<br>다양한 공익 활동을 전개해 나가고 있습니다.</p>
+        </div>
+    </div>
+
+<ul class="cardWrap container">
+    <li class="item">
+        <img src="./images/card01.jpg" alt="">
+        <div class="card-text">
+            <div class="title">
+                <h3>문화 만들기</h3>
+                <img src="./images/right-arrow.png" alt="">
+            </div>
+            <p>게임을 기반으로 다양한 문화적 가치를 공유하고 누구나 즐겁게 참여할 수 있는 교육 및 여가 문화를 만들어갑니다.</p>
+        </div>
+    </li>
+    <li class="item">
+        <img src="./images/card01.jpg" alt="">
+        <div class="card-text">
+            <div class="title">
+                <h3>문화 만들기</h3>
+                <img src="./images/right-arrow.png" alt="">
+            </div>
+            <p>게임을 기반으로 다양한 문화적 가치를 공유하고 누구나 즐겁게 참여할 수 있는 교육 및 여가 문화를 만들어갑니다.</p>
+        </div>
+    </li>
+    <li class="item">
+        <img src="./images/card01.jpg" alt="">
+        <div class="card-text">
+            <div class="title">
+                <h3>문화 만들기</h3>
+                <img src="./images/right-arrow.png" alt="">
+            </div>
+            <p>게임을 기반으로 다양한 문화적 가치를 공유하고 누구나 즐겁게 참여할 수 있는 교육 및 여가 문화를 만들어갑니다.</p>
+        </div>
+    </li>
+</ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <script>
+        $(".slider").bxSlider({
+            auto: true,
+            mode: "fade",
+            pager: false,
+        });
+      </script>
+</body>
+</html>

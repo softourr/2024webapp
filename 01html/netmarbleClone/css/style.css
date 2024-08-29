@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'netmarbleB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    height: 300vh;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.hd{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+.netmarbleFont{
+    font-family: "netmarbleB", sans-serif;
+}
+
+.container{
+    width: 1360px;
+    margin: 0 auto;
+}
+
+.menuWrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.menuWrap h1{
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    width: 150px;
+    height: 50px;
+}
+
+.menu li a{
+    display: flex;
+    font-size: 1.2em;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bx-wrapper{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+
+.visual{
+    min-height: 400px;
+    height: 100vh;
+    margin-bottom: 80px;
+}
+
+.visual .visual-text{
+    width: 1360px;
+    position:relative;
+    top: 200px;
+    padding: 40px;
+    z-index: 1;
+}
+
+.visual .visual-text h2{
+    font-size: 4.5em;
+    color: white;
+}
+
+.visual .visual-text p{
+    font-size: 1.35em;
+    color: white;
+    font-weight: bold;
+}
+
+.visual .visual-img{
+    position: relative;
+    top: -200px;
+}
+
+.visual2{
+    height: 460px;
+    margin-bottom: 80px;
+}
+
+.visual2 .text{
+    position: relative;
+    top: 260px;
+    height: 200px;
+}
+
+.text h3{
+    font-size: 2.5em;
+    color: #1e1e1e;
+    margin-bottom: 20px;
+}
+
+.text .box{
+    background-color: rgb(255, 229, 32);
+    height: 6px;
+    width: 70px;
+}
+
+.text p{
+    font-size: 1.2em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.cardWrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardWrap .item{
+    width: 384px;
+    height: 580px;
+}
+
+.cardWrap .item .card-text{
+    padding: 20px;
+}
+
+.cardWrap .title{
+    display: flex;
+}
+
+.cardWrap .title img{
+    align-self: center;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.cardWrap img{
+    transition: 0.3s;
+}
+
+.cardWrap img:hover{
+    transform: translate(0,-20px);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+}
