@@ -81,10 +81,12 @@ body{
 
 .visual .visual-text{
     width: 1360px;
-    position:relative;
-    top: 300px;
-    padding: 80px;
+    height: 100vh;
+    position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .visual .visual-text h2{
@@ -103,14 +105,32 @@ body{
     top: -200px;
 }
 
+.banner1{
+    background: url(../images/banner01.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.banner2{
+    background: url(../images/banner02.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.banner3{
+    background: url(../images/banner04.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
 .visual2{
-    height: 460px;
+    height: 300px;
     margin-bottom: 80px;
 }
 
 .visual2 .text{
     position: relative;
-    top: 260px;
+    top: 80px;
     height: 200px;
 }
 
@@ -169,12 +189,88 @@ body{
 }
 
 .box{
-    background-color: red;
     height: 460px;
+    display: flex;
+    position: relative;
+    margin-bottom: 40px;
 }
 
 .box .y-text{
     background-color: #ffd44a;
+    padding: 90px 40px;
+    height: 360px;
+    width: 1200px;
 }
 
-.box .
+.box .y-text p{
+    display: inline;
+    font-size: 2.3em;
+}
+
+.box .y-text h6{
+    margin-top: 40px;
+    font-size: 1.5em;
+}
+
+.box .y-text p.p-bold{
+    font-weight: bold;
+}
+
+.box img{
+    width: 592px;
+    height: 360px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.notice{
+    height: 800px;
+    background-color: #f7f8f9;
+}
+
+.notice .text{
+    padding-top: 80px;
+}
+
+.ft{
+    height: 300px;
+    background-color: #333;
+}
+
+.notice .item{
+    background-color: white;
+    padding: 40px;
+    width: 360px;
+    height: 466px;
+    position: relative;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.notice .item:hover{
+    transform: translate(0,-20px);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+}
+
+.notice .item h3{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.notice .item p{
+    font-size: 1.1em;
+    color: #7e7e7e;
+}
+
+.notice .item p.item-ft{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 20px;
+}
+
+.ft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

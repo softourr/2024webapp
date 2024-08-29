@@ -106,8 +106,22 @@
     </div>
 
     <div class="container customer">
-        
+        <h2 class="text-center content-title">CUSTOMER</h2>
+        <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
+        <div class="owl-carousel owl-theme">
+            <div class="item rounded">
+                <div class="slider-view d-flex gap-2 p-3">
+                    <img src="./images/user.svg" alt="" class="img-fluid" style="width: 150px;">
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, iste.</p>
+                        <img src="./images/quote.svg" alt="" style="width: 30px;" class="d-block ms-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="ft"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -118,7 +132,20 @@
         new WOW().init();
     </script>
     <script>
-        
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            responsiveClass:true,
+            autoplay: true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                800:{
+                    items:2,
+                }
+            }
+        });
     </script>
 </body>
 </html>

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -24,31 +26,22 @@
     </header>
     <div class="visual">
         <ul class="slider">
-            <li>
-                <div class="visual-text">
+            <li class="banner1">
+                <div class="container visual-text">
                     <h2>게임소통학교</h2>
                     <p>게임으로 소통하고 게임으로 가까워지는 가족</p>
                 </div>
-                <div class="visual-img">
-                    <img src="./images/banner01.jpg" alt="">
-                </div>
             </li>
-            <li>
-                <div class="visual-text">
+            <li class="banner2">
+                <div class="container visual-text">
                     <h2>전국 장애학생<br>e페스티벌</h2>
                     <p>게임 안에서 하나 되는 모두의 축제</p>
                 </div>
-                <div class="visual-img">
-                    <img src="./images/banner02.jpg" alt="">
-                </div>
             </li>
-            <li>
-                <div class="visual-text">
+            <li class="banner3">
+                <div class="container visual-text">
                     <h2>게임아카데미</h2>
                     <p>미래의 꿈 게임에 담다</p>
-                </div>
-                <div class="visual-img">
-                    <img src="./images/banner04.jpg" alt="">
                 </div>
             </li>
         </ul>
@@ -95,18 +88,45 @@
         </li>
     </ul>
 
-    <div class="box">
+    <div class="container box">
         <div class="y-text">
             <p>우리는 </p>
             <p class="p-bold">문화적 가치를 확산</p>
             <p>하여 우리 사회의<br>미래 경쟁력을 높여갑니다.</p>
             <h6>주요목적</h6>
         </div>
-        <img src="" alt="">
+        <img src="./images/purpose.jpg" alt="">
+    </div>
+
+    <div class="notice">
+        <div class="container">
+            <div class="text">
+                <h3>재단소식</h3>
+                <div class="box"></div>
+            </div>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <h3>
+                        [안내] 2024 넷마블게임문화체험관 신규 설치 기관 공모 최종 결과 안내
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, impedit sed totam cumque quibusdam nulla.</p>
+                    <p class="item-ft">공지사항·2024.07.18</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft">
+        <div class="container">
+            <div class="ft-logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(".slider").bxSlider({
             auto: true,
@@ -114,5 +134,21 @@
             pager: false,
         });
       </script>
+      <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            responsiveClass:true,
+            autoplay: true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                800:{
+                    items:3,
+                }
+            }
+        });
+    </script>
 </body>
 </html>

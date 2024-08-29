@@ -100,3 +100,13 @@
 .service .card img{
     height: 200px;
 }
+
+/* customer */
+
+.customer .item{
+    background-color: lightblue;
+}
+
+.ft{
+    height: 400px;
+}
