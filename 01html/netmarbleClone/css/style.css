@@ -82,8 +82,8 @@ body{
 .visual .visual-text{
     width: 1360px;
     position:relative;
-    top: 200px;
-    padding: 40px;
+    top: 300px;
+    padding: 80px;
     z-index: 1;
 }
 
@@ -136,6 +136,7 @@ body{
 .cardWrap{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
 }
 
 .cardWrap .item{
@@ -166,3 +167,14 @@ body{
     transform: translate(0,-20px);
     box-shadow: 0 10px 10px rgba(0,0,0,0.3);
 }
+
+.box{
+    background-color: red;
+    height: 460px;
+}
+
+.box .y-text{
+    background-color: #ffd44a;
+}
+
+.box .
