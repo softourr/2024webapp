@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 id="demo"></h1>
     <script>
-        // console.log(1)
-        // setTimeout(function(){
-        //     console.log(2)
-        // },1000)
-        // console.log(3)
+      // console.log(1)
+      // setTimeout(function(){
+      //     console.log(2)
+      // },1000)
+      // console.log(3)
 
+      // function fn1(fn2){
+      //     console.log(1);
+      //     fn2();
+      // }
 
-        // function fn1(fn2){
-        //     console.log(1);
-        //     fn2();
-        // }
+      // function fn2(){
+      //     console.log(2);
+      // }
 
-        // function fn2(){
-        //     console.log(2);
-        // }
+      // fn1(fn2);
 
-        // fn1(fn2);
+      // const pro = new Promise(function(resolve, reject){
+      //     resolve();
+      // })
 
-        // const pro = new Promise(function(resolve, reject){
-        //     resolve();
-        // })
+      // // promise 성공 시 then
+      // // 실패 시 catch 구문 실행
+      // pro
+      //     .then(function() {
+      //         console.log('성공!')
+      //     })
+      //     .catch(function() {
+      //         console.log('실패!')
+      //     });
 
-        // // promise 성공 시 then
-        // // 실패 시 catch 구문 실행
-        // pro
-        //     .then(function() {
-        //         console.log('성공!')
-        //     })
-        //     .catch(function() {
-        //         console.log('실패!')
-        //     });
+      // const pro = new Promise(function(resolve, reject) {
+      //     setTimeout(function(){
+      //         resolve("HI");
+      //     },3000);
+      // })
 
-        const pro = new Promise(function(resolve, reject) {
-            setTimeout(function(){
-                resolve("HI");
-            },3000);
-        })
+      // pro.then(function(value){
+      //     console.log("data: " + value)
+      //     document.getElementById("demo").innerHTML = value;
+      // })
 
-        pro.then(function(value){
-            console.log("data: " + value)
-            document.getElementById("demo").innerHTML = value;
-        })
-
+      async function fn1() {
+        await setTimeout(function () {}, 3000);
+      }
     </script>
-</body>
+  </body>
 </html>

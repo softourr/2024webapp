@@ -5,8 +5,19 @@
     /* 테마로 사용 가능 */
     --primary-color-1: pink;
     --primary-color-0: #f2f2f2;
+    --bg-dark: #1d1d1d;
     --text-shadow-1: 0 10px 10px rgba(0,0,0,0.3);
     --shadow-1: rgba(0,0,0,0.2);
+}
+
+ul, li{list-style: none; margin: 0; padding: 0;}
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.bg-default{
+    background-color: var(--primary-color-0) !important;
 }
 
 .navBox{
@@ -104,9 +115,28 @@
 /* customer */
 
 .customer .item{
-    background-color: lightblue;
+    background-color: white;
 }
 
+.portfolio .element-item{
+    transition: 0.3s;
+}
+
+.portfolio .element-item:hover{
+    transform: scale(1.05);
+}
+
+/* online */
+.online{
+    background: url(../images/contact-cover.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* footer */
+
 .ft{
-    height: 400px;
+    height: 200px;
+    background-color: white;
 }

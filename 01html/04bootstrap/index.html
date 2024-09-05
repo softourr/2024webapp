@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css" integrity="sha512-lvaVbvmbHhG8cmfivxLRhemYlTT60Ly9Cc35USrpi8/m+Lf/f/T8x9kEIQq47cRj1VQIFuxTxxCcvqiQeQSHjQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,7 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow">
+    <nav class="header navbar navbar-expand-lg bg-body-tertiary shadow">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="./images/logo.svg" alt="" class="img-fluid" style="height: 50px;">
@@ -105,33 +107,225 @@
         </div>
     </div>
 
-    <div class="container customer">
-        <h2 class="text-center content-title">CUSTOMER</h2>
-        <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
-        <div class="owl-carousel owl-theme">
-            <div class="item rounded">
-                <div class="slider-view d-flex gap-2 p-3">
-                    <img src="./images/user.svg" alt="" class="img-fluid" style="width: 150px;">
-                    <div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, iste.</p>
-                        <img src="./images/quote.svg" alt="" style="width: 30px;" class="d-block ms-auto">
+    <div class="bg-default py-5 mb-5">
+        <div class="container customer">
+            <h2 class="text-center content-title">CUSTOMER</h2>
+            <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
+            <div class="owl-carousel owl-theme">
+                <div class="item rounded">
+                    <div class="slider-view d-flex gap-2 p-3">
+                        <img src="./images/user.svg" alt="" class="img-fluid" style="width: 150px;">
+                        <div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, iste.</p>
+                            <img src="./images/quote.svg" alt="" style="width: 30px;" class="d-block ms-auto">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="ft"></div>
+    <div class="container portfolio">
+        <h2 class="text-center content-title">PORTFOLIO</h2>
+        <p class="text-center mb-3">Lorem ipsum dolor sit amet.</p>
+        <div class="btn-group mb-3">
+            <button data-filter="" class="btn btn-primary active" id="btn">ALL</button>
+            <button data-filter=".web" class="btn btn-primary">WEB</button>
+            <button data-filter=".vue" class="btn btn-primary">VUE</button>
+            <button data-filter=".react" class="btn btn-primary">REACT</button>
+            <button data-filter=".jpa" class="btn btn-primary">JPA</button>
+        </div>
+        <div class="row view">
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <a href="./images/servicos/1.jpg" class="popup-link">
+                    <img src="./images/servicos/1.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+            <div class="col-6 col-lg-3 element-item vue mb-3">
+                <a href="./images/servicos/2.jpg" class="popup-link">
+                    <img src="./images/servicos/2.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+            <div class="col-6 col-lg-3 element-item react mb-3">
+                <a href="./images/servicos/3.jpg" class="popup-link">
+                    <img src="./images/servicos/3.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <a href="./images/servicos/4.jpg" class="popup-link">
+                    <img src="./images/servicos/4.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+            <div class="col-6 col-lg-3 element-item jpa mb-3">
+                <a href="./images/servicos/5.jpg" class="popup-link">
+                    <img src="./images/servicos/5.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+            <div class="col-6 col-lg-3 element-item react mb-3">
+                <a href="./images/servicos/6.jpg" class="popup-link">
+                    <img src="./images/servicos/6.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+            <div class="col-6 col-lg-3 element-item jpa mb-3">
+                <a href="./images/servicos/7.jpg" class="popup-link">
+                    <img src="./images/servicos/7.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+            <div class="col-6 col-lg-3 element-item vue mb-3">
+                <a href="./images/servicos/8.jpg" class="popup-link">
+                    <img src="./images/servicos/8.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+            <div class="col-6 col-lg-3 element-item jpa mb-3">
+                <a href="./images/servicos/9.jpg" class="popup-link">
+                    <img src="./images/servicos/9.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+        </div>
+    </div>
 
+    <div class="online py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 center text-white text-center">
+                    <h2>CONTACT US</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, aperiam!</p>
+                    <button class="btn btn-danger">NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft py-5">
+        <div class="container py-5 px-5">
+            <div class="row mb-5">
+                <div class="col-lg-3 mb-5">
+                    <img src="./images/udacity-logo.png" alt="" width="50px">
+                </div>
+                <div class="col-6 col-lg mb-3">
+                    <h4>Company</h4>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg"><h4>Product</h4>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                    </ul></div>
+                <div class="col-6 col-lg"><h4>Community</h4>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                    </ul></div>
+                <div class="col-6 col-lg"><h4>Company</h4>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                        <li>menu1</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <ul class="d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
+                        <li><a href="javascript:void(0)">Privacy</a></li>
+                        <li class="px-2">/</li>
+                        <li><a href="#!">Teams</a></li>
+                        <li class="px-2">/</li>
+                        <li><a href="#!">Site map</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="d-flex justify-content-center justify-content-md-end gap-2">
+                        <li><a href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#!"><i class="fa-brands fa-google"></i></a></li>
+                        <li><a href="#!"><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <p class="small">Lorem ipsum dolor sit.<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, reprehenderit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- popper : bootstrap에서 drop down menu 사용 시 -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- wow : 스크롤 시 애니메이션 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- owlcarousel : slider(carousel)-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- isotope : image filtering -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- magnific-popup : lightbox/modal/popup 관련 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js" integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
         new WOW().init();
     </script>
     <script>
+
+        // $(document) : 문서 관련
+        // $(window) : 윈도우 관련 : 스크롤 사용 시
+        $(window).scroll(function() {
+            let scroll = $(window).scrollTop();
+            console.log(scroll)
+
+            if(scroll > 300) {
+                $(".header").addClass("fixed-top")
+            } else {
+                $(".header").removeClass("fixed-top")
+            }
+        })
+
+        // 유사 배열
+        // .btn-group의 button에 따라 배열 생성
+        const btns = $(".portfolio .btn-group button")
+        btns.click(function(){
+            let i = $(this).index()
+            console.log(i)
+
+            btns.removeClass("active")
+            // jQuery에서 eq는 index에 해당하는 객체 잡기
+            btns.eq(i).addClass("active")
+
+            let selector = btns.eq(i).attr("data-filter");
+            console.log(selector)
+
+            $(".portfolio .view").isotope({
+                filter: selector
+            })
+        });
+
+        window.onload = function () {
+            $(".portfolio #btn").trigger("click")
+        }
+
+        $(".view .popup-link").magnificPopup({
+            type: "image"
+        })
+
+
         $('.owl-carousel').owlCarousel({
             loop:true,
             margin:10,
@@ -147,5 +341,25 @@
             }
         });
     </script>
+
+    <!-- <script>
+        // vanilla JS
+        document.getElementsByClassName("grid")[0].style.display = "none";
+        // jQuery
+        $(".grid").css("display","none")
+    </script> -->
+
 </body>
 </html>
+
+<!-- 
+    사이트 선정 후,
+
+    1. font 뽑아내기[font / size / weight ...]
+        h2(60), h3(32), title(18 bold), basic(14), button(12)
+        ==> 변수화
+    2. color 뽑아내기
+        ==> 변수화
+    3. Layout 뽑아내기
+        HTML div 태그 구분
+-->

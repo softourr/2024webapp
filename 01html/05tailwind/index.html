@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-blue-200 py-3 mb-3">
+      <div class="container mx-auto bg-blue-100 flex justify-between px-10">
+        <div
+          class="bg-pink-300 flex justify-center items-center px-3 rounded-sm"
+        >
+          logo
+        </div>
+        <nav class="hidden md:block">
+          <ul class="flex gap-3">
+            <li class="hover:bg-blue-700 rounded-sm">
+              <a href="#" class="hover:text-gray-100 p-2 block">menu1</a>
+            </li>
+            <li class="hover:bg-blue-700 rounded-sm">
+              <a href="#" class="hover:text-gray-100 p-2 block">menu2</a>
+            </li>
+            <li class="hover:bg-blue-700 rounded-sm">
+              <a href="#" class="hover:text-gray-100 p-2 block">menu3</a>
+            </li>
+            <li class="hover:bg-blue-700 rounded-sm">
+              <a href="#" class="hover:text-gray-100 p-2 block">menu4</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="block my-1 md:hidden">
+          <div class="w-7 h-1 bg-gray-700 my-1 rounded-md"></div>
+          <div class="w-7 h-1 bg-gray-700 my-1 rounded-md"></div>
+          <div class="w-7 h-1 bg-gray-700 my-1 rounded-md"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto flex flex-col-reverse md:flex-row md:gap-2">
+      <div
+        class="hover:shadow-2xl h-16 md:h-20 mb-2 md:mb-0 w-full md:w-1/2 bg-violet-400 flex justify-center items-center rounded-lg text-gray-100 font-bold text-lg"
+      >
+        1
+      </div>
+      <div
+        class="hover:shadow-2xl h-16 md:h-20 mb-2 md:mb-0 w-full md:w-1/2 bg-pink-400 flex justify-center items-center rounded-lg text-gray-100 font-bold text-lg"
+      >
+        2
+      </div>
+    </div>
+  </body>
+</html>
