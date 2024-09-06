@@ -1,32 +1,38 @@
 <template>
   <div class="weather-wrap">
     <div class="location">
-      {{ props.data.city }} / {{ props.data.location }}
+      {{ $store.state.weatherData.city }} /
+      {{ $store.state.weatherData.location }}
     </div>
     <div>
       <img
-        :src="`https://openweathermap.org/img/wn/${props.data.icon}@4x.png`"
+        :src="`https://openweathermap.org/img/wn/${$store.state.weatherData.icon}@4x.png`"
         alt=""
       />
     </div>
     <div class="result">
       <div class="card-wrap">
         <p class="tit">Temp</p>
-        <p>{{ (props.data.temp - 273.13).toFixed(1) }}°C</p>
+        <p>{{ ($store.state.weatherData.temp - 273.13).toFixed(1) }}°C</p>
       </div>
       <div class="card-wrap">
         <p class="tit">Desc</p>
-        <p>{{ props.data.text }}</p>
+        <p>{{ $store.state.weatherData.text }}</p>
       </div>
+    </div>
+    <div class="vuex">
+      <!-- {{ import { useStore } from "vuex";
+
+const store = useStore();
+
+onMounted(async () => {
+  await store.dispatch("getWeather");
+}); @click="$store.commit('addCount', 10)">CLICK</button> -->
     </div>
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  data: Object,
-});
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .weather-wrap {

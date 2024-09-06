@@ -4,9 +4,10 @@
       class="inp"
       type="text"
       @input="inputText = $event.target.value"
+      @keyup.enter="$store.dispatch('getWeather', inputText)"
       placeholder="지역명을 입력하세요"
     />
-    <div class="search-icon" @click="emits('search-city', inputText)">
+    <div class="search-icon" @click="$store.dispatch('getWeather', inputText)">
       <i class="fa-solid fa-magnifying-glass"></i>
     </div>
   </div>
@@ -32,6 +33,9 @@ const emits = defineEmits();
     padding: 10px 16px;
     width: 100%;
     font-size: 18px;
+    &::placeholder {
+      color: rgb(174, 198, 207);
+    }
   }
 
   .search-icon {
