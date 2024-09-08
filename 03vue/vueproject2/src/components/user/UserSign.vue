@@ -5,7 +5,7 @@
         type="text"
         class="form-control"
         placeholder="User ID"
-        v-model="userData.userid"
+        v-model="store.state.tmpData.userid"
       />
     </div>
     <div class="mb-3">
@@ -13,7 +13,7 @@
         type="text"
         class="form-control"
         placeholder="User Password"
-        v-model="userData.password"
+        v-model="store.state.tmpData.password"
       />
     </div>
     <div class="mb-3">
@@ -21,7 +21,7 @@
         type="text"
         class="form-control"
         placeholder="User Name"
-        v-model="userData.username"
+        v-model="store.state.tmpData.username"
       />
     </div>
     <div class="mb-3">
@@ -29,7 +29,7 @@
         type="text"
         class="form-control"
         placeholder="User Address"
-        v-model="userData.addr"
+        v-model="store.state.tmpData.addr"
       />
     </div>
     <div class="input-group mb-3">
@@ -63,7 +63,23 @@
       </div>
     </div>
 
-    <div class="submitBtn btn btn-primary" @click="addUser">회원가입</div>
+    <div
+      v-if="$store.state.modifyState === null"
+      class="submitBtn btn btn-primary"
+      @click="addUser"
+    >
+      회원가입
+    </div>
+
+    <div
+      v-if="$store.state.modifyState !== null"
+      class="modifyButton d-flex gap-2"
+    >
+      <div class="submitBtn btn btn-danger" @click="modifyUser">수정</div>
+      <div class="submitBtn btn btn-secondary" @click="cancelModifyUser">
+        취소
+      </div>
+    </div>
   </div>
 </template>
 
@@ -72,34 +88,15 @@ import { ref } from "vue";
 import { useStore } from "vuex";
 
 const store = useStore();
-
 const fileInput = ref(null);
-const userData = ref({
-  userid: null,
-  password: null,
-  username: null,
-  addr: null,
-  image: null,
-});
-
-const clearForm = () => {
-  userData.value.userid = null;
-  userData.value.password = null;
-  userData.value.username = null;
-  userData.value.addr = null;
-  userData.value.image = null;
-  if (fileInput.value) {
-    fileInput.value.value = "";
-  }
-};
 
 const addUser = () => {
   if (
-    userData.value.userid === null ||
-    userData.value.password === null ||
-    userData.value.username === null ||
-    userData.value.addr === null ||
-    userData.value.image === null ||
+    store.state.tmpData.userid === null ||
+    store.state.tmpData.password === null ||
+    store.state.tmpData.username === null ||
+    store.state.tmpData.addr === null ||
+    store.state.tmpData.image === null ||
     store.state.tmpData.latitude === null ||
     store.state.tmpData.longitude === null
   ) {
@@ -107,26 +104,78 @@ const addUser = () => {
     return;
   }
 
-  let uData = {
-    userid: userData.value.userid,
-    password: userData.value.password,
-    username: userData.value.username,
-    addr: userData.value.addr,
-    image: userData.value.image,
-    latitude: store.state.tmpData.latitude,
-    longitude: store.state.tmpData.longitude,
-  };
-  store.commit("addUser", uData);
+  if (
+    store.state.tmpData.latitude < 33.05 ||
+    store.state.tmpData.latitude > 38.36 ||
+    store.state.tmpData.longitude < 125.03 ||
+    store.state.tmpData.longitude > 131.53
+  ) {
+    alert("정확한 위도/경도 값을 입력해주세요!");
 
-  clearForm();
+    store.commit("clearTmpLatLon");
+    return;
+  }
+  store.commit("addUser");
+
+  store.commit("clearForm");
+  if (fileInput.value) {
+    fileInput.value.value = "";
+  }
   store.commit("clearTmpLatLon");
+};
+
+const modifyUser = () => {
+  if (
+    store.state.tmpData.userid === null ||
+    store.state.tmpData.password === null ||
+    store.state.tmpData.username === null ||
+    store.state.tmpData.addr === null ||
+    store.state.tmpData.image === null ||
+    store.state.tmpData.latitude === null ||
+    store.state.tmpData.longitude === null
+  ) {
+    alert("입력되지 않은 정보가 있어요!");
+    return;
+  }
+
+  if (
+    store.state.tmpData.latitude < 33.05 ||
+    store.state.tmpData.latitude > 38.36 ||
+    store.state.tmpData.longitude < 125.03 ||
+    store.state.tmpData.longitude > 131.53
+  ) {
+    alert("정확한 위도/경도 값을 입력해주세요!");
+
+    store.commit("clearTmpLatLon");
+    return;
+  }
+
+  store.commit("updateUser");
+
+  store.commit("clearForm");
+  if (fileInput.value) {
+    fileInput.value.value = "";
+  }
+  store.commit("clearTmpLatLon");
+
+  store.commit("clearModify");
+};
+
+const cancelModifyUser = () => {
+  store.commit("clearForm");
+  if (fileInput.value) {
+    fileInput.value.value = "";
+  }
+  store.commit("clearTmpLatLon");
+
+  store.commit("clearModify");
 };
 
 const handleImage = (e) => {
   const file = e.target.files[0];
 
   if (file) {
-    userData.value.image = URL.createObjectURL(file);
+    store.state.tmpData.image = URL.createObjectURL(file);
   }
 };
 </script>

@@ -4,6 +4,8 @@ import App from "./App.vue";
 import store from "./store/store";
 import router from "./router/route";
 import { loadKakaoMapSDK } from "./utils/kakaoMapLoader";
+import VueSweetalert2 from "vue-sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
 
 async function initApp() {
   try {
@@ -11,7 +13,7 @@ async function initApp() {
 
     const app = createApp(App);
 
-    app.use(store).use(router);
+    app.use(store).use(router).use(VueSweetalert2);
 
     app.config.globalProperties.$kakao = window.kakao;
 
