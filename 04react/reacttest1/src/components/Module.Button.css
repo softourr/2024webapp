@@ -1,0 +1,31 @@
+.active-button {
+  cursor: pointer;
+  margin: 10px;
+  width: 100px;
+  height: 24px;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background-color: #7539dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #5e29b9;
+}
+
+.disabled-button {
+  cursor: pointer;
+  margin: 10px;
+  width: 100px;
+  height: 24px;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  font-weight: bold;
+  border: 2px solid #aaa;
+}
