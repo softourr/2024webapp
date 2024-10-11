@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.ZonedDateTime;
+import java.util.List;
 
 @Service
 public class FoodService {
@@ -47,11 +48,41 @@ public class FoodService {
         return food;
     }
 
-    public void editFood(){
+    @Transactional
+    public void editFood(
+        Long foodId,
+        CreateAndEditFoodRequest request
+    ){
+        FoodEntity food = foodRepository.findById(foodId).orElseThrow(()->new RuntimeException("Food not found"));
+        food.changeNameAndAddress(request.getName(), request.getAddress());
+        foodRepository.save(food);
+
+        List<MenuEntity> menus = menuRepository.findAllByFoodId(foodId);
+        menuRepository.deleteAll(menus);
+
+        request.getMenus().forEach((menu)->{
+            MenuEntity menuEntity =
+                    MenuEntity.builder()
+                            .foodId(food.getId())
+                            .name(menu.getName())
+                            .price(menu.getPrice())
+                            .createdAt(ZonedDateTime.now())
+                            .updatedAt(ZonedDateTime.now())
+                            .build();
+            menuRepository.save(menuEntity);
+        });
+
 
     }
 
-    public void deleteFood(){
+    public void deleteFood(Long foodId){
+        FoodEntity food = foodRepository.findById(foodId).orElseThrow(()->new RuntimeException("Food not found"));
+        foodRepository.delete(food);
+
+        List<MenuEntity> menus = menuRepository.findAllByFoodId(foodId);
+        menuRepository.deleteAll(menus);
+
+
 
     }
 

@@ -31,19 +31,18 @@ public class FoodApi {
     }
 
     @PutMapping("/food/{foodId}")
-    public String editFood(
+    public void editFood(
             @PathVariable("foodId") Long foodId,
             @RequestBody CreateAndEditFoodRequest request
     ) {
-        return "putFood name : " + request.getName() +
-                " address : " + request.getAddress() ;
+        foodService.editFood(foodId, request);
     }
 
     @DeleteMapping("/food/{foodId}")
-    public String deleteFood(
+    public void deleteFood(
             @PathVariable("foodId") Long foodId
     ) {
-        return "delete " + foodId;
+        foodService.deleteFood(foodId);
     }
 
 }
